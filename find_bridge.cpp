@@ -41,7 +41,7 @@ void dfs(int k, int p){
             fup[k] = min(fup[k], tin[to]);
         else{
             dfs(to, k);
-            fup[k] = min(fup[k], tin[to]);
+            fup[k] = min(fup[k], fup[to]);
             if(fup[to]>tin[k])
                 bridge(k, to);
         }
